@@ -18,7 +18,7 @@ import 'package:lifecycle/lifecycle_mixin.dart';`
         ],
     );
 ```
-2.在你需要添加监听的`State`中混入`LifecycleMixin`,并在`initState`中调用`bindImplIntoRoute()`方法。
+~~2.在你需要添加监听的`State`中混入`LifecycleMixin`,并在`initState`中调用`bindImplIntoRoute()`方法。~~
 
 
 3.实现`whenShow()/whenHide()`方法,代码看起来是下面的样子。
