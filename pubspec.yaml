@@ -1,6 +1,6 @@
 name: lifecycle_lite
 description: You can monitor page lifecycle by this lib.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/lp0int
 
 environment:

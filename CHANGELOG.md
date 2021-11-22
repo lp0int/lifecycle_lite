@@ -1,3 +1,6 @@
+## [0.0.3] - 修改了初始化方法.
+
+* 废弃了`bindImplIntoRoute`方法了.使用`minin & on`来自动初始化
 ## [0.0.2] - Add null safety support.
 
 * 添加了空安全支持.
