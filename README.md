@@ -6,9 +6,11 @@
 这样在每次监听到路由变化时，去调用顶层路由对应的绑定方法就OK了。
 记得在路由被移出的时候对应的方法也要移出哦~
 
+- [x] StatefulWidget
+- [x] StatelessWidget
+
 ## Getting Started
->`
-import 'package:lifecycle/lifecycle_mixin.dart';`  
+>`lifecycle_lite: ^0.0.3`  
 
 1.首先在你的根布局`MaterialApp`中绑定一个路由监听`LifeNavigatorObserver()`.
 ```dart
