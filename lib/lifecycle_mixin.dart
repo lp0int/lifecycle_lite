@@ -2,7 +2,20 @@ import 'package:flutter/material.dart';
 
 import 'lifecycle.dart';
 
-mixin LifecycleMixin<T extends StatefulWidget> on State<T> {
+abstract class LifecycleMixin {
+  void whenShow();
+  void whenHide();
+}
+
+mixin LifecycleStatelessMixin on StatelessWidget implements LifecycleMixin {
+  @override
+  StatelessElement createElement() {
+    lifeCycle.bindImplIntoRoute(this);
+    return super.createElement();
+  }
+}
+mixin LifecycleStatefulMixin<T extends StatefulWidget> on State<T>
+    implements LifecycleMixin {
   @override
   void initState() {
     super.initState();
@@ -14,7 +27,4 @@ mixin LifecycleMixin<T extends StatefulWidget> on State<T> {
   bindImplIntoRoute() {
     lifeCycle.bindImplIntoRoute(this);
   }
-
-  void whenShow() {}
-  void whenHide() {}
 }

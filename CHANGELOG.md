@@ -1,6 +1,7 @@
-## [0.0.3] - 修改了初始化方法.
+## [0.0.3] - 2021/11/23.
 
-* 废弃了`bindImplIntoRoute`方法了.使用`minin & on`来自动初始化
+* 废弃了`bindImplIntoRoute`方法了.使用`mixin & on`来自动初始化
+* 添加了对`StatelessWidget`的支持
 ## [0.0.2] - Add null safety support.
 
 * 添加了空安全支持.
