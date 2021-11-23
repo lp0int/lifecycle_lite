@@ -15,6 +15,7 @@ class Lifecycle with WidgetsBindingObserver {
 
   get pageSize => _routeQueue.length;
 
+  ///绑定相关页面进栈
   bindImplIntoRoute(LifecycleMixin lifecycleImpl) {
     bool b = _map.containsKey(_routeQueue.first);
     if (b)
@@ -23,6 +24,7 @@ class Lifecycle with WidgetsBindingObserver {
     _map[_routeQueue.first] = lifecycleImpl;
   }
 
+  ///解绑，不过页面推出的时候会自动解绑
   unBindImplIntoRoute(LifecycleMixin lifecycleImpl) {
     _map.removeWhere((key, value) => value == lifecycleImpl);
   }
@@ -50,6 +52,7 @@ class Lifecycle with WidgetsBindingObserver {
         Queue.from(_routeQueue.map((e) => e == oldRoute ? newRoute : e));
   }
 
+  ///隐藏时执行到这里
   _doHide(Route? r) {
     if (_routeQueue.isEmpty) return;
     _map.forEach((key, value) {
@@ -59,6 +62,7 @@ class Lifecycle with WidgetsBindingObserver {
     });
   }
 
+  ///曝光时执行到这里
   _doShow() {
     printLog(
         content: "_map.length:${_map.length}",

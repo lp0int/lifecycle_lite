@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './lifecycle_export.dart';
 import './utils.dart';
 
+///生命周期的监听，用来处理页面进出栈
 class LifeNavigatorObserver extends NavigatorObserver {
   static const TAG = "LifeNavigatorObserver";
   @override
